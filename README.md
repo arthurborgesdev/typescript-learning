@@ -42,3 +42,21 @@ The naming is not perfect, it is just a initial convention to speed things up
 
 3 - Understand basic TypeScript syntax, types, and type annotations
 
+Primitive types: string, number and boolean. Also Array (number[] or Array<number>) and any (which means you know the rules better than TS).
+
+It is possible to type annotate variables, however is often not necessary.
+
+Functions:
+
+TypeScript allows typing both input and output of functions
+
+Also we can add return type annotations
+
+Object types.
+
+4 - Learn about interfaces, classes, and functions in TypeScript
+
+---> See examples in index.ts
+
+Interfaces: two types are compatible if their internal structure is compatible.
+Then, an interface can be implemented by just having the shape the interface requires, without an explicit `implements clause`
