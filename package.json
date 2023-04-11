@@ -1,0 +1,29 @@
+{
+  "name": "typescript-learning",
+  "version": "1.0.0",
+  "description": "Learning TypeScript with ChatGPT in 5 days",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npx tsc index.ts",
+    "dev": "node index.js",
+    "start": "npm run build && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurborgesdev/typescript-learning.git"
+  },
+  "keywords": [
+    "typescript",
+    "study",
+    "chatgpt"
+  ],
+  "author": "Arthur Borges",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurborgesdev/typescript-learning/issues"
+  },
+  "homepage": "https://github.com/arthurborgesdev/typescript-learning#readme",
+  "dependencies": {
+    "typescript": "^5.0.4"
+  }
+}
