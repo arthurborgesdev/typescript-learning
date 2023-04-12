@@ -1,0 +1,34 @@
+{
+  "author": "Santosh Kumar <santosh79@gmail.com> (https://github.com/santosh79)",
+  "name": "arrays",
+  "description": "Ruby like arrays",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:santosh79/ar.git"
+  },
+  "engines": {
+    "node": ">= 0.1.0"
+  },
+  "preferGlobal": "false",
+  "bin": {},
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "@types/underscore": "^1.11.4"
+  },
+  "devDependencies": {
+    "underscore": ">= 1.0.0"
+  },
+  "homepage": "https://github.com/santosh79/ar",
+  "main": "./index.js",
+  "bugs": {
+    "url": "https://github.com/santosh79/ar/issues"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "arrays"
+  ],
+  "license": "BSD-2-Clause"
+}

@@ -121,3 +121,15 @@ _Generic Type Variables_
 4 - Get comfortable with namespaces and modules
 
 Modules are the default in node.js and are recommended over namespaces in modern code
+
+## ChatGPT:
+### Day 3: Apply TypeScript to Real-World Projects
+
+1 - Convert a simple JavaScript project to TypeScript
+2 - Work with popular JavaScript libraries and frameworks (React, Angular, etc.) using TypeScript
+3 - Learn about type definition files and how to use them
+4 - Explore debugging and error handling in TypeScript
+
+### Myself:
+
+1 - 
