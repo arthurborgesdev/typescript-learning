@@ -132,4 +132,34 @@ Modules are the default in node.js and are recommended over namespaces in modern
 
 ### Myself:
 
-1 - 
+1 - Converted arrays project from JavaScript to TypeScript
+2 - To be done in a separate repository
+3 - Learnt about type definition files
+4 - Explored error handling
+
+## ChatGPT:
+Day 4: TypeScript Best Practices
+
+1 - Study TypeScript best practices and conventions
+2 - Learn about linting and formatting with tools like ESLint and Prettier
+3 - Understand how to write clean, maintainable, and scalable TypeScript code
+4 - Dive into unit testing TypeScript code with tools like Jest or Mocha
+
+Day 5: Final Evaluation and Next Steps
+
+1 - Review your progress and understanding of TypeScript concepts
+2 - Complete a TypeScript coding challenge or mini-project to test your skills
+3 - Identify areas that need improvement or further study
+4 - Discuss next steps for deepening your TypeScript knowledge and applying it in real-world projects
+
+### Myself:
+
+4.1 - Apply it in Vue3
+4.2 - On the go
+4.3 - Enforce it with Vue3
+4.4 - Probably use Jest alone or Node assert
+
+5.1 - Check at the end of experimentation
+5.2 - Included above
+5.3 - Constant evaluation
+5.4 - Continue studying and extending it to Node projects as well
