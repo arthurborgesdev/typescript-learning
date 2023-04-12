@@ -60,3 +60,64 @@ Object types.
 
 Interfaces: two types are compatible if their internal structure is compatible.
 Then, an interface can be implemented by just having the shape the interface requires, without an explicit `implements clause`
+
+Day1: Assessment
+
+- Unknown types
+- Inheritance
+- Access modifiers
+- Interfaces
+
+## ChatGPT:
+### Day 2: Dive into Advanced TypeScript Features
+
+1 - Study advanced types: union types, intersection types, mapped types, etc.
+2 - Learn about type guards and type inference
+3 - Understand generics and explore their use cases
+4 - Get comfortable with namespaces and modules
+
+### Myself:
+
+1 - Union types: combining types
+
+Can't use methods that are available on only one or few of the total types
+The solution is to `narrow` the union with code.
+
+_Intersection types_
+
+_Type aliases_
+
+Type alias is a name for a type
+Interface can also name an object type
+
+Interfaces can be extendable while types cannot be opened to add new properties
+
+Intersections are used to combine existing object types by using the `&` operator.
+
+Main difference between interfaces and intersections are how conflicts are handled
+
+_Mapped types_ - Learn in the future. It seems there is a lot of content to learn before it (like Generics).
+
+2 - Learn about type guards and type inference
+
+_Type guard:_
+
+```if (typeof variable === 'number') { ... }```
+
+typeof type guard
+
+truthiness narrowing
+
+_Pause for function type expressions before type inference:_
+
+_Type inference_
+
+3 - Understand generics and explore their use cases
+
+_Creating Types from Types_
+
+_Generic Type Variables_
+
+4 - Get comfortable with namespaces and modules
+
+Modules are the default in node.js and are recommended over namespaces in modern code

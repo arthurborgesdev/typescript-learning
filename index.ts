@@ -67,3 +67,152 @@ let point2 = { x: 3, y: 4 };
 myDistance = distance(point1, point2);
 
 console.log(myDistance);
+
+// unknow typing
+
+function f1(a: any) {
+  a.b();
+}
+
+/*
+function f2(a: unknown) {
+  a.b();
+}
+*/
+
+function printID(id: number | string) {
+  console.log(`Your ID is: ${id}`);
+}
+
+printID(101);
+
+printID("202");
+
+// printID({ myID: 22342 }); --> this will throw an error because the argument is not a number or a string
+
+function printMultiple(id: string | number | object) {
+  if (typeof id === "string") {
+    console.log(`Your ID is: ${id.toUpperCase()}`);
+  } else if (typeof id === "number") {
+    console.log(`Your ID is: ${id}`);
+  } else {
+    console.log(`Your ID is: ${JSON.stringify(id)}`);
+  }
+}
+
+printMultiple("101");
+
+printMultiple(202);
+
+printMultiple({ myID: 22342 });
+
+printMultiple([1, 2, 3, 4, 5]);
+
+// printMultiple(null); won't work because null is not a string, number or object
+
+/* Intersection types */
+
+interface ErrorHandling {
+  success: boolean;
+  error?: { message: string }
+}
+
+interface ArtistsData {
+  artists: { name: string }[]
+}
+
+interface ArtistsResponse extends ErrorHandling, ArtistsData {}
+
+function handleArtistsResponse(response: ArtistsResponse) {
+  if (response.error) {
+    console.error(response.error.message);
+  } else {
+    console.log(response.artists);
+  }
+}
+
+// typeError example: handleArtistsResponse({artists: []}) because success is missing
+
+// The main difference between interfaces and intersections is the way they handle errors.
+
+
+/* typeof type guard */
+
+function strip(x: string | number) {
+  if (typeof x === "number") {
+    return x.toFixed(2);
+  }
+  return x.trim();
+}
+
+console.log(strip("  123.456  "));
+
+console.log(strip(123.456));
+
+/* Truthiness narrowing */
+
+function printAll(strs: string | string[] | null) { // checking for truthiness of strs, makes it so that it can't be null and avoid the error
+  if (strs && typeof strs === "object") {
+    for (const s of strs) {
+      console.log(s);
+    }
+  } else if (typeof strs === "string") {
+    console.log(strs);
+  }
+}
+
+printAll("abc");
+
+printAll(["a", "b", "c"]);
+
+printAll(null);
+
+/* Function type expressions */
+
+type Log = (message: string, userID?: string) => void;
+
+let log: Log = (message, userID = "Not signed in") => {
+  let time = new Date().toLocaleTimeString();
+  console.log(time, message, userID);
+}
+
+log("Page loaded");
+
+/* Type inference examples */
+
+let a = 10; // infered as number
+
+// a = "10"; --> this will throw an error because a is a number
+
+let b = [1, null]; // infered as (number | null)[]
+
+// b[2] = "a"; --> this will throw an error because b is a number
+
+/*
+window.onmousedown = (mouseEvent) => { // infered as (mouseEvent: MouseEvent) => void
+  console.log(mouseEvent.button);
+}
+
+window.onmousedown = (mouseEvent: any) => { // infered as (mouseEvent: any) => void
+  console.log(mouseEvent.button);
+}
+*/
+
+/* Generics */
+
+function identity<Type>(arg: Type): Type {
+  return arg;
+}
+
+let output = identity<string>("myString");
+
+let inferedOutput = identity("myString");
+
+/* Generic Interface */
+
+interface GenericIdentityFn {
+  <Type>(arg: Type): Type;
+}
+
+let myIndentity: GenericIdentityFn = identity;
+
